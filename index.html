@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Job Listings</title>
+  <link rel="stylesheet" href="./design/index.css">
+  <script src="./design/index.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      display: none;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"></div>
+    <div class="filter">
+      <div class="filterItems" id="filterSection"></div>
+      <div class="clear">Clear</div>
+    </div>
+    <div class="wrapper">
+      <div class="item photosnap" data-role="[Frontend]" data-level="[Senior]" data-languages="[HTML, CSS, JavaScript]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Photosnap</span>
+            <div class="special">
+              <span class="special-new">New!</span>
+              <span class="special-feature">Featured</span>
+            </div>
+            <div class="levelTitle">Senior Frontend Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">1d ago</span>
+              <span class="small duration">Full Time</span>
+              <span class="small location">USA only</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Senior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            HTML
+          </div>
+          <div class="language footIcon">
+            CSS
+          </div>
+          <div class="language footIcon">
+            JavaScript
+          </div>
+        </div>
+      </div>
+      <div class="item manage" data-role="[Fullstack]" data-level="[Midweight]" data-languages="[Python]"
+        data-tools="[React]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Manage</span>
+            <div class="special">
+              <span class="special-new">New!</span>
+              <span class="special-feature">Featured</span>
+            </div>
+            <div class="levelTitle">Fullstack Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">1d ago</span>
+              <span class="small duration">Part Time</span>
+              <span class="small location">Remote</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Fullstack
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Midweight
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            Python
+          </div>
+          <div class="tools footIcon">
+            React
+          </div>
+        </div>
+      </div>
+      <div class="item account" data-role="[Frontend]" data-level="[Junior]" data-languages="[JavaScript]" data-tools="[React, Sass]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Account</span>
+            <div class="special">
+              <span class="special-new">New!</span>
+            </div>
+            <div class="levelTitle">Junior Frontend Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">2d ago</span>
+              <span class="small duration">Part Time</span>
+              <span class="small location">USA only</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Junior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            JavaScript
+          </div>
+          <div class="tools footIcon">
+            React
+          </div>
+          <div class="tools footIcon">
+            Sass
+          </div>
+        </div>
+      </div>
+      <div class="item myhome" data-role="[Frontend]" data-level="[Junior]" data-languages="[CSS, JavaScript]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">MyHome</span>
+            <div class="levelTitle">Junior Frontend Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">5d ago</span>
+              <span class="small duration">Contract</span>
+              <span class="small location">USA only</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Junior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            CSS
+          </div>
+          <div class="language footIcon">
+            JavaScript
+          </div>
+        </div>
+      </div>
+      <div class="item loopstudios" data-role="[Fullstack]" data-level="[Senior]" data-languages="[HTML, CSS, JavaScript]" data-tools="[Sass]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Loop Studios</span>
+            <div class="levelTitle">Software Engineer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">1w ago</span>
+              <span class="small duration">Full Time</span>
+              <span class="small location">Worldwide</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Senior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            HTML
+          </div>
+          <div class="language footIcon">
+            CSS
+          </div>
+          <div class="language footIcon">
+            JavaScript
+          </div>
+          <div class="tools footIcon">
+            Sass
+          </div>
+        </div>
+      </div>
+      <div class="item faceit" data-role="[Backend]" data-level="[Junior]" data-languages="[Ruby]" data-tools="[RoR]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">FaceIt</span>
+            <div class="levelTitle">Junior Backend Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">2w ago</span>
+              <span class="small duration">Full Time</span>
+              <span class="small location">UK only</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Backend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Junior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            Ruby
+          </div>
+          <div class="tools footIcon">
+            RoR
+          </div>
+        </div>
+      </div>
+      <div class="item shortly" data-role="[Frontend]" data-level="[Junior]" data-languages="[HTML, JavaScript]" data-tools="[Sass]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Shortly</span>
+            <div class="levelTitle">Junior Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">2w ago</span>
+              <span class="small duration">Full Time</span>
+              <span class="small location">Worldwide</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Junior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            HTML
+          </div>
+          <div class="language footIcon">
+            JavaScript
+          </div>
+          <div class="tools footIcon">
+            Sass
+          </div>
+        </div>
+      </div>
+      <div class="item insure" data-role="[Frontend]" data-level="[Junior]" data-languages="[JavaScript]" data-tools="[Vue, Sass]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Insure</span>
+            <div class="levelTitle">Junior Frontend Developer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">2w ago</span>
+              <span class="small duration">Full Time</span>
+              <span class="small location">USA only</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Junior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            JavaScript
+          </div>
+          <div class="tools footIcon">
+            Vue
+          </div>
+          <div class="tools footIcon">
+            Sass
+          </div>
+        </div>
+      </div>
+      <div class="item eyecamco" data-role="[Fullstack]" data-level="[Midweight]" data-languages="[Python, JavaScript]"
+        data-tools="[Django]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">Eyecam Co.</span>
+            <div class="levelTitle">Full Stack Engineer</div>
+            <span class="smallWrapper">
+              <span class="small postTime">3w ago</span>
+              <span class="small duration">Full Time</span>
+              <span class="small location">Worldwide</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Fullstack
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Midweight
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            JavaScript
+          </div>
+          <div class="language footIcon">
+            Python
+          </div>
+          <div class="tools footIcon">
+            Django
+          </div>
+        </div>
+      </div>
+      <div class="item theairfiltercompany" data-role="[Frontend]" data-level="[Junior]" data-languages="[JavaScript]" data-tools="[React, Sass]">
+        <div class="headWrapper">
+          <div class="details">
+            <span class="name">The Air Filter Company</span>
+            <div class="levelTitle">Front-end Dev</div>
+            <span class="smallWrapper">
+              <span class="small postTime">1m ago</span>
+              <span class="small duration">Part Time</span>
+              <span class="small location">Worldwide</span>
+            </span>
+          </div>
+        </div>
+        <div class="footWrapper">
+          <!-- Role -->
+          <div class="role footIcon">
+            Frontend
+          </div>
+          <!-- Level -->
+          <div class="level footIcon">
+            Junior
+          </div>
+          <!-- Languages -->
+          <div class="language footIcon">
+            JavaScript
+          </div>
+          <div class="tools footIcon">
+            React
+          </div>
+          <div class="tools footIcon">
+            Sass
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+</body>
+
+</html>

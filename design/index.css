@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+    --image-width: 50px;
+    --image-height: 50px;
+    --image-top: -25px;
+    --image-left: 20px;
+    --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+    --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+    --Light-Grayish-Cyan-Filter: hsl(180, 31%, 95%);
+    --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+    --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: "League Spartan", Arial, Helvetica, sans-serif
+}
+span {
+    display: inline-block;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    height: 100px;
+    width: 100vw;
+    background: url("../images/bg-header-mobile.svg");
+    background-color: var(--Dark-Grayish-Cyan);
+}
+.filter, .item {
+    width: 80%;
+    max-width: 950px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+.filter {
+    height: 100px;
+    background-color: var(--Light-Grayish-Cyan-Background);
+    color: var(--Desaturated-Dark-Cyan);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    position: relative;
+    top: -30px;
+}
+.filter.filtershow {
+    display: grid;
+}
+.filter.filterhide {
+    display: none;
+}
+.filter .filterItems {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+.filterItems .filterItem {
+    background-color: rgba(82, 82, 82, 0.158);
+    color: var(--Desaturated-Dark-Cyan);
+    font-size: 12px;
+    /* padding: 4px; */
+    border-radius: 4px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.filterItem .filterText {
+    padding: 0 5px;
+}
+.filterItem .filterCancel {
+    background: url("../images/icon-remove.svg");
+    width: 10px;
+    background-repeat: no-repeat;
+    height: 10px;
+    background-position: center;
+    background-color: gold;
+    padding: 11px;
+}
+.filterItem .filterCancel:hover {
+    cursor: pointer;
+}
+.filter .clear {
+    place-self: center;
+    font-weight: bold;
+}
+.clear:hover {
+    text-decoration: underline;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.item {
+    background-color: var(--Light-Grayish-Cyan-Background);
+    display: grid;
+    padding: 30px 20px;
+    box-shadow: 0 2px 20px 0px rgba(0, 0, 0, 0.658);
+    position: relative;
+}
+.item.itemshow {
+    display: grid;
+}
+.item.itemhide {
+    display: none;
+}
+.item:first-child {
+    margin-top: 50px;
+}
+.item::before { /* General style for all entries */
+    content: '';
+    position: absolute;
+    width: var(--image-width);
+    height: var(--image-height);
+    top: var(--image-top);
+    left: var(--image-left);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+.item:hover::before {
+    border: 1px solid black;
+}
+.item.photosnap::before {
+    background: url('../images/photosnap.svg');
+    background-size: contain;
+}
+.item.manage::before {
+    background: url('../images/manage.svg');
+    background-size: contain;
+}
+.item.account::before {
+    background: url('../images/account.svg');
+    background-size: contain;
+}
+.item.myhome::before {
+    background: url('../images/myhome.svg');
+    background-size: contain;
+}
+.item.loopstudios::before {
+    background: url('../images/loop-studios.svg');
+    background-size: contain;
+}
+.item.faceit::before {
+    background: url('../images/faceit.svg');
+    background-size: contain;
+}
+.item.shortly::before {
+    background: url('../images/shortly.svg');
+    background-size: contain;
+}
+.item.insure::before {
+    background: url('../images/insure.svg');
+    background-size: contain;
+}
+.item.eyecamco::before {
+    background: url('../images/eyecam-co.svg');
+    background-size: contain;
+}
+.item.theairfiltercompany::before {
+    background: url('../images/the-air-filter-company.svg');
+    background-size: contain;
+}
+
+.headWrapper {
+    display: flex;
+    position: relative;
+}
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 7px;
+    align-items: center;
+}
+.details .name {
+    padding: 4px 8px 4px 0;
+    margin-right: 10px;
+}
+.details .special {
+    display: contents;
+}
+.special span {
+    padding: 4px 8px;
+    color: var(--Light-Grayish-Cyan-Filter);
+    border-radius: 20px;
+    margin: 0 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+}
+.special span:hover {
+    box-shadow: 0 0 10px 0 gray;
+}
+.special .special-new {
+    background-color: var(--Dark-Grayish-Cyan);
+}
+.special .special-feature {
+    background-color: var(--Very-Dark-Grayish-Cyan);
+}
+.details .levelTitle {
+    font-size: 13px;
+}
+.details .levelTitle, .details .smallWrapper {
+    width: 100%;
+}
+.details .smallWrapper {
+    margin-bottom: 20px;
+}
+.smallWrapper .small {
+    font-size: 10px;
+    color: gray;
+    position: relative;
+}
+.smallWrapper .small:nth-child(n):not(.smallWrapper .small:last-child) {
+    margin-right: 20px;
+}
+.smallWrapper .small:nth-child(n):not(.smallWrapper .small:last-child)::after {
+    content: '';
+    position: absolute;
+    border: 1px solid gray;
+    border-radius: 50%;
+    top: 50%;
+    right: -16px;
+}
+.item .footWrapper {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.514);
+    padding-top: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+.footWrapper .footIcon {
+    padding: 5px;
+    color: var(--Desaturated-Dark-Cyan);
+    background-color: rgba(82, 82, 82, 0.158);
+    margin-right: 20px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.footWrapper .footIcon:hover {
+    box-shadow: 0 0 5px 0 gray;
+}
+@media (min-width: 750px) {
+    .item {
+        grid-template-columns: 300px 1fr;
+    }
+    .item::before {
+        top: 35px;
+        left: 10px;
+    }
+    .item .headWrapper {
+        margin-left: 50px;
+    }
+    .item .footWrapper {
+        border-top: none;
+        justify-content: right;
+        align-items: center;
+    }
+}
